@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 01, 2019 at 06:54 PM
+-- Generation Time: May 01, 2019 at 07:02 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -31,11 +31,13 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `agent_details`;
 CREATE TABLE IF NOT EXISTS `agent_details` (
   `agent_ID` int(11) NOT NULL,
+  `agency_name` varchar(50) DEFAULT NULL,
   `first_name` text,
   `last_name` text,
-  `date_of_birth` text,
   `add_line_1` text,
   `add_line_2` text,
+  `town` varchar(100) DEFAULT NULL,
+  `postcode` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `contact_number` varchar(15) DEFAULT NULL,
   `band_ID` int(11) DEFAULT NULL,
@@ -93,6 +95,7 @@ DROP TABLE IF EXISTS `concert_details`;
 CREATE TABLE IF NOT EXISTS `concert_details` (
   `concert_ID` int(11) NOT NULL,
   `concert_name` varchar(50) DEFAULT NULL,
+  `concert_description` varchar(200) DEFAULT NULL,
   `concert_date` date DEFAULT NULL,
   `venue` text,
   `ticket_type_ID` int(11) DEFAULT NULL,
