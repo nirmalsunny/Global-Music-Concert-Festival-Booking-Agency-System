@@ -9,7 +9,7 @@ package gmusic;
  *
  * @author David
  */
-public class CustomerView extends javax.swing.JPanel  {
+public class CustomerView extends javax.swing.JFrame  {
     
    
 

@@ -31,7 +31,7 @@ void RegisterClicked() {
       if(true){
           JOptionPane.showMessageDialog(null, "Login Successful.");
           //find the usertype.
-          int userType = 4;
+          int userType = 1;
           JFrame window = new JFrame();
           switch(userType){
               case 1 :  window.setContentPane(new CustomerView());

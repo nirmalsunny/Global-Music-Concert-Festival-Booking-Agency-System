@@ -9,7 +9,7 @@ package gmusic;
  *
  * @author David
  */
-public class CorporateOrganisation extends javax.swing.JPanel {
+public class CorporateOrganisation extends javax.swing.JFrame {
 
     /**
      * Creates new customizer CorporateOrganisation
@@ -70,22 +70,27 @@ public class CorporateOrganisation extends javax.swing.JPanel {
         view_concerts.setText("View Concerts/Festivals");
 
         make_booking.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        make_booking.setText("Make Booking");
+        make_booking.setText("Book Events");
+        make_booking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                make_bookingActionPerformed(evt);
+            }
+        });
 
         view_bookings.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        view_bookings.setText("View Bookings");
+        view_bookings.setText("View Events");
 
         edit_details.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         edit_details.setText("Edit Account Details");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel1.setText("Check out, our upcoming events!");
+        jLabel1.setText("Check out, all upcoming events!");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel7.setText("Make a booking");
+        jLabel7.setText("Create an event");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel8.setText("Have a look at all your bookings ");
+        jLabel8.setText("Have a look at all your events ");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel9.setText("Update you account details/ membership details");
@@ -95,7 +100,7 @@ public class CorporateOrganisation extends javax.swing.JPanel {
         login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/login.png"))); // NOI18N
-        login.setText("Logout");
+        login.setText("Back");
         login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         login.setDoubleBuffered(true);
@@ -219,6 +224,10 @@ public class CorporateOrganisation extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void make_bookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_bookingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_make_bookingActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -9,7 +9,7 @@ package gmusic;
  *
  * @author David
  */
-public class AdminView extends javax.swing.JPanel implements java.beans.Customizer {
+public class AdminView extends javax.swing.JFrame {
     
     private Object bean;
 
@@ -20,9 +20,7 @@ public class AdminView extends javax.swing.JPanel implements java.beans.Customiz
         initComponents();
     }
     
-    public void setObject(Object bean) {
-        this.bean = bean;
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,7 +96,7 @@ public class AdminView extends javax.swing.JPanel implements java.beans.Customiz
         login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Logout");
+        login.setText("Back");
         login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         login.setDoubleBuffered(true);
