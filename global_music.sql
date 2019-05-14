@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 01, 2019 at 07:02 PM
+-- Generation Time: May 14, 2019 at 10:16 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project1`
+-- Database: `global_music`
 --
 
 -- --------------------------------------------------------
@@ -181,7 +181,14 @@ CREATE TABLE IF NOT EXISTS `ticket_types` (
   `concert_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`ticket_type_ID`),
   KEY `concert_ID` (`concert_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ticket_types`
+--
+
+INSERT INTO `ticket_types` (`ticket_type_ID`, `ticket_type`, `ticket_price`, `concert_ID`) VALUES
+(1, 'elite', '100', NULL);
 
 --
 -- Constraints for dumped tables
