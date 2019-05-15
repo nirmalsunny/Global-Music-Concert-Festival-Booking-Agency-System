@@ -21,7 +21,7 @@ public class Login {
           //find the usertype.
           int userType = 1;
           JFrame window = new JFrame();
-          switch(userType){
+          /*switch(userType){
               case 1 :  window.setContentPane(new CustomerMain());
                         break;
               case 2 :  window.setContentPane(new CoMain());
@@ -32,6 +32,8 @@ public class Login {
                         break;
               default : JOptionPane.showMessageDialog(null, "Error!");
           }
+            */
+            window.setContentPane(new CustomerMain());
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             window.setBackground(new java.awt.Color(255, 255, 255));
             //window.setBounds(new java.awt.Rectangle(0, 0, 500, 400));
