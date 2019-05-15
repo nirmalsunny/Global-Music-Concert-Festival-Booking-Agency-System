@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 14, 2019 at 10:16 PM
+-- Generation Time: May 15, 2019 at 12:30 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -145,9 +145,17 @@ CREATE TABLE IF NOT EXISTS `login_table` (
   `user_ID` int(11) NOT NULL,
   `username` text,
   `password` text,
-  `isAdmin` tinyint(1) NOT NULL DEFAULT '0',
+  `AccType` int(1) NOT NULL DEFAULT '1',
+  `isLoggedIn` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login_table`
+--
+
+INSERT INTO `login_table` (`user_ID`, `username`, `password`, `AccType`, `isLoggedIn`) VALUES
+(1, 'admin', 'admin', 2, 1);
 
 -- --------------------------------------------------------
 

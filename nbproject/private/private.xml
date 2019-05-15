@@ -3,23 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/ADmanageBookings.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/ConcertOrganiser.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CustomerView.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/ADmanageEvents.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CVbookingView.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CORaddEvent.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/ADmanageInvoices.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/COmonthlypay.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CObookingView.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CObooking.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/COeditAccount.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CVconcertView.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/COReditEvent.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CVbooking.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/COconcertView.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/ADeditCustomerAccounts.java</file>
-            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/CVeditAccount.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/view/organiser/ConcertOrganiserMain.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/view/admin/AdminMain.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/view/organiser/OrAddEvent.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/Login.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/view/admin/AdminEditAccounts.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/view/RegisterView.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/Main.java</file>
+            <file>file:/C:/Users/Nirmal%20Sunny/Documents/GitHub/Global-Music-Concert-Festival-Booking-Agency-System/src/gmusic/Register.java</file>
         </group>
     </open-files>
 </project-private>
