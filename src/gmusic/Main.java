@@ -24,7 +24,7 @@ public class Main {
         //check whether logged in or not
         //get data from db - select username, AccType rom login_table where loggedIn = 1;
         String userid = "admin";
-        String Acctype = "Concert/Festival Organiser";
+        String Acctype = "Administrator";
         if(true) { //if result count is 1, then one user is logged in. if >1, then error.
             load(Acctype, userid);
         } else {
@@ -69,7 +69,7 @@ public class Main {
         //window.setBounds(new java.awt.Rectangle(0, 0, 500, 400));
         window.setResizable(false);
         window.setSize(new java.awt.Dimension(500, 450));
-        //window.setLocationRelativeTo(null);
+        window.setLocationRelativeTo(null);
         window.pack();
         window.setVisible(true);
     
