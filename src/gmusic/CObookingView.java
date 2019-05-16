@@ -42,14 +42,18 @@ public class CObookingView extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel7 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
+        backbutton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         make_booking1 = new javax.swing.JButton();
 
-        setLayout(new java.awt.BorderLayout());
-
         jPanel1.setLayout(new java.awt.BorderLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 470));
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -82,14 +86,13 @@ public class CObookingView extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Back");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        backbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        backbutton.setText("Back");
+        backbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -97,14 +100,14 @@ public class CObookingView extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login)
+                .addComponent(backbutton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -195,7 +198,7 @@ public class CObookingView extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void make_bookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_bookingActionPerformed
@@ -206,8 +209,15 @@ public class CObookingView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_make_booking1ActionPerformed
 
+    private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().CObackbutton();
+        this.dispose();
+    }//GEN-LAST:event_backbuttonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backbutton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -221,7 +231,6 @@ public class CObookingView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
     private javax.swing.JButton make_booking;
     private javax.swing.JButton make_booking1;
     // End of variables declaration//GEN-END:variables

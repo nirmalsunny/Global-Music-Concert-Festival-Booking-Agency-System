@@ -9,19 +9,18 @@ package gmusic;
  *
  * @author David
  */
-public class CObookingView extends javax.swing.JFrame {
+public class AdminManageEvents extends javax.swing.JFrame {
     
-
+  
 
     /**
-     * Creates new customizer CObookingView
+     * Creates new customizer ADmanageEvents
      */
-    public CObookingView() {
+    public AdminManageEvents() {
         initComponents();
     }
     
-
-
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,19 +36,25 @@ public class CObookingView extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        make_booking = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel7 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        backbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        make_booking1 = new javax.swing.JButton();
-
-        setLayout(new java.awt.BorderLayout());
+        jLabel3 = new javax.swing.JLabel();
+        view_concerts = new javax.swing.JButton();
+        view_concerts1 = new javax.swing.JButton();
+        view_concerts2 = new javax.swing.JButton();
+        view_concerts3 = new javax.swing.JButton();
 
         jPanel1.setLayout(new java.awt.BorderLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 460));
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -69,27 +74,19 @@ public class CObookingView extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
-        make_booking.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        make_booking.setText("More Info");
-        make_booking.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                make_bookingActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel7.setText("Upcoming events you have booked");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel1.setText("Manage Events");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
 
         jPanel7.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Back");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        backbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        backbutton.setText("Back");
+        backbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -97,28 +94,52 @@ public class CObookingView extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login)
+                .addComponent(backbutton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel3.setText(" Stormzy Gig - 2nd July 2019 - O2 Arena");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel4.setText(" Martin Garrix - 15th July 2019 - Wembley Stadium");
 
-        make_booking1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        make_booking1.setText("More Info");
-        make_booking1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel3.setText(" Stormzy Gig - 2nd July 2019 - O2 Arena");
+
+        view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        view_concerts.setText("Cancel Event");
+        view_concerts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                make_booking1ActionPerformed(evt);
+                view_concertsActionPerformed(evt);
+            }
+        });
+
+        view_concerts1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        view_concerts1.setText("Cancel Event");
+        view_concerts1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_concerts1ActionPerformed(evt);
+            }
+        });
+
+        view_concerts2.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        view_concerts2.setText("Edit Event Details");
+        view_concerts2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_concerts2ActionPerformed(evt);
+            }
+        });
+
+        view_concerts3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        view_concerts3.setText("Edit Event Details");
+        view_concerts3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_concerts3ActionPerformed(evt);
             }
         });
 
@@ -129,39 +150,52 @@ public class CObookingView extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator3)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(204, 204, 204))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(make_booking, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                            .addComponent(make_booking1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(141, 141, 141))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(view_concerts)
+                                .addGap(39, 39, 39)
+                                .addComponent(view_concerts3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(view_concerts1)
+                                .addGap(40, 40, 40)
+                                .addComponent(view_concerts2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(make_booking)
-                    .addComponent(jLabel3))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(make_booking1))
-                .addGap(125, 125, 125)
+                    .addComponent(view_concerts1)
+                    .addComponent(view_concerts2))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(view_concerts)
+                    .addComponent(view_concerts3))
+                .addGap(43, 43, 43)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,23 +229,38 @@ public class CObookingView extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void make_bookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_bookingActionPerformed
+    private void view_concertsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concertsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_make_bookingActionPerformed
+    }//GEN-LAST:event_view_concertsActionPerformed
 
-    private void make_booking1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_booking1ActionPerformed
+    private void view_concerts1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concerts1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_make_booking1ActionPerformed
+    }//GEN-LAST:event_view_concerts1ActionPerformed
+
+    private void view_concerts2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concerts2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_view_concerts2ActionPerformed
+
+    private void view_concerts3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concerts3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_view_concerts3ActionPerformed
+
+    private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().CObackbutton();
+        this.dispose();
+    }//GEN-LAST:event_backbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backbutton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -219,11 +268,12 @@ public class CObookingView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
-    private javax.swing.JButton make_booking;
-    private javax.swing.JButton make_booking1;
+    private javax.swing.JButton view_concerts;
+    private javax.swing.JButton view_concerts1;
+    private javax.swing.JButton view_concerts2;
+    private javax.swing.JButton view_concerts3;
     // End of variables declaration//GEN-END:variables
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -247,7 +297,7 @@ public class CObookingView extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new CObookingView().setVisible(true);
+            new AdminManageEvents().setVisible(true);
         });
     }
 }

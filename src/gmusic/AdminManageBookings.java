@@ -41,13 +41,19 @@ public class AdminManageBookings extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel8 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
+        backbutton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         view_concerts = new javax.swing.JButton();
         view_concerts1 = new javax.swing.JButton();
 
         jPanel1.setLayout(new java.awt.BorderLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 460));
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
@@ -75,14 +81,13 @@ public class AdminManageBookings extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Back");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        backbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        backbutton.setText("Back");
+        backbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -90,14 +95,14 @@ public class AdminManageBookings extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login)
+                .addComponent(backbutton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -213,8 +218,15 @@ public class AdminManageBookings extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_view_concerts1ActionPerformed
 
+    private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().CObackbutton();
+        this.dispose();
+    }//GEN-LAST:event_backbuttonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backbutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -229,7 +241,6 @@ public class AdminManageBookings extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
     private javax.swing.JButton view_concerts;
     private javax.swing.JButton view_concerts1;
     // End of variables declaration//GEN-END:variables

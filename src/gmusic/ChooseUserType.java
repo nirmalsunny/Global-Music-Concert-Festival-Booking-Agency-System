@@ -9,18 +9,18 @@ package gmusic;
  *
  * @author David
  */
-public class CustomerMain extends javax.swing.JFrame  {
+public class ChooseUserType extends javax.swing.JFrame {
     
-   
+  
 
     /**
-     * Creates new customizer CustomerView
+     * Creates new customizer ChooseUserType
      */
-    public CustomerMain() {
+    public ChooseUserType() {
         initComponents();
     }
-    @SuppressWarnings("unchecked")
-        
+    
+  
    
 
     /**
@@ -31,14 +31,13 @@ public class CustomerMain extends javax.swing.JFrame  {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        view_concerts = new javax.swing.JButton();
-        make_booking = new javax.swing.JButton();
-        view_bookings = new javax.swing.JButton();
-        edit_details = new javax.swing.JButton();
+        customer_login = new javax.swing.JButton();
+        CO_login = new javax.swing.JButton();
+        EventO_login = new javax.swing.JButton();
+        admiin_login = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -47,9 +46,9 @@ public class CustomerMain extends javax.swing.JFrame  {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
+        logoutbutton = new javax.swing.JButton();
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        setLayout(new java.awt.BorderLayout());
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setForeground(new java.awt.Color(240, 240, 240));
@@ -62,43 +61,68 @@ public class CustomerMain extends javax.swing.JFrame  {
         jLabel2.setToolTipText("");
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 490));
 
-        view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        view_concerts.setText("View Concerts/Festivals");
-        view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
+        customer_login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        customer_login.setText("Select");
+        customer_login.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
+        customer_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customer_loginActionPerformed(evt);
+            }
+        });
 
-        make_booking.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        make_booking.setText("Make Booking");
+        CO_login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        CO_login.setText("Select");
+        CO_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CO_loginActionPerformed(evt);
+            }
+        });
 
-        view_bookings.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        view_bookings.setText("View Bookings");
+        EventO_login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        EventO_login.setText("Select");
+        EventO_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EventO_loginActionPerformed(evt);
+            }
+        });
 
-        edit_details.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        edit_details.setText("Edit Account Details");
+        admiin_login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        admiin_login.setText("Select");
+        admiin_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                admiin_loginActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel1.setText("Check out, our upcoming events!");
+        jLabel1.setText("Customer");
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel7.setText("Make a booking");
+        jLabel7.setText("Corporate Organisation");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel8.setText("Have a look at all your bookings ");
+        jLabel8.setText("Event Organiser");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jLabel9.setText("Update you account details/ membership details");
+        jLabel9.setText("Administrator");
 
         jPanel5.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Logout");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        logoutbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        logoutbutton.setText("Log Out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -106,14 +130,14 @@ public class CustomerMain extends javax.swing.JFrame  {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoutbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login)
+                .addComponent(logoutbutton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -127,7 +151,7 @@ public class CustomerMain extends javax.swing.JFrame  {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(view_concerts))
+                        .addComponent(customer_login, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator3)
@@ -135,15 +159,15 @@ public class CustomerMain extends javax.swing.JFrame  {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(edit_details, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(admiin_login, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(view_bookings, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EventO_login, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(make_booking, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CO_login, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -152,24 +176,24 @@ public class CustomerMain extends javax.swing.JFrame  {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(view_concerts))
+                    .addComponent(customer_login))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(make_booking)
+                    .addComponent(CO_login)
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(view_bookings)
+                    .addComponent(EventO_login)
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(edit_details)
+                    .addComponent(admiin_login)
                     .addComponent(jLabel9))
                 .addGap(28, 28, 28)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,30 +219,57 @@ public class CustomerMain extends javax.swing.JFrame  {
                 .addGap(0, 0, 0))
         );
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_END);
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        add(jPanel2, java.awt.BorderLayout.PAGE_END);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void customer_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customer_loginActionPerformed
+        // TODO add your handling code here:
+        new Main().CustomerLoginScreen();
+        this.dispose();
+    }//GEN-LAST:event_customer_loginActionPerformed
+
+    private void EventO_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EventO_loginActionPerformed
+        // TODO add your handling code here:
+        new Main().EventOrganiserLoginScreen();
+        this.dispose();
+    }//GEN-LAST:event_EventO_loginActionPerformed
+
+    private void CO_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CO_loginActionPerformed
+        // TODO add your handling code here:
+        new Main().COLoginScreen();
+        this.dispose();
+    }//GEN-LAST:event_CO_loginActionPerformed
+
+    private void admiin_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admiin_loginActionPerformed
+        // TODO add your handling code here:
+        new Main().AdminLoginScreen();
+        this.dispose();
+    }//GEN-LAST:event_admiin_loginActionPerformed
+
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().logoutOnChooseUserScreen();
+        this.dispose();
+    }//GEN-LAST:event_logoutbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton edit_details;
+    private javax.swing.JButton CO_login;
+    private javax.swing.JButton EventO_login;
+    private javax.swing.JButton admiin_login;
+    private javax.swing.JButton customer_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
-    private javax.swing.JButton make_booking;
-    private javax.swing.JButton view_bookings;
-    private javax.swing.JButton view_concerts;
+    private javax.swing.JButton logoutbutton;
     // End of variables declaration//GEN-END:variables
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -233,22 +284,16 @@ public class CustomerMain extends javax.swing.JFrame  {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CustomerMain().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ChooseUserType().setVisible(true);
         });
     }
 }

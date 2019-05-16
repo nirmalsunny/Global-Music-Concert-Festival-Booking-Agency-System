@@ -11,11 +11,11 @@ public final class DBase {
     private Statement statement;
     public static DBase db;
     DBase() {
-        String url= "jdbc:mysql://localhost:3306/";
-        String dbName = "project1";
+        String url= "jdbc:mysql://studentnet.cst.beds.ac.uk/";
+        String dbName = "group6";
         String driver = "com.mysql.jdbc.Driver";
-        String userName = "ns";
-        String password = "root";
+        String userName = "cstmysql56";
+        String password = "makeqehi";
         try {
             Class.forName(driver).newInstance();
             this.conn = (Connection)DriverManager.getConnection(url+dbName,userName,password);

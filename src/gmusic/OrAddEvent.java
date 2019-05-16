@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gmusic.view.organiser;
+package gmusic;
 
 /**
  *
@@ -40,7 +40,7 @@ public class OrAddEvent extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel6 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
+        backbutton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -53,7 +53,7 @@ public class OrAddEvent extends javax.swing.JFrame {
         username12 = new javax.swing.JTextField();
         username13 = new javax.swing.JTextField();
         username14 = new javax.swing.JTextField();
-        view_concerts = new javax.swing.JButton();
+        confirmbutton = new javax.swing.JButton();
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -72,6 +72,12 @@ public class OrAddEvent extends javax.swing.JFrame {
         jLabel2.setToolTipText("");
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 450));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel1.setText("Add/Edit infomation event");
@@ -79,14 +85,13 @@ public class OrAddEvent extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Back");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        backbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        backbutton.setText("Back");
+        backbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -94,15 +99,15 @@ public class OrAddEvent extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(backbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addGap(370, 370, 370))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(login)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(backbutton)
+                .addContainerGap())
         );
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
@@ -153,12 +158,12 @@ public class OrAddEvent extends javax.swing.JFrame {
         username14.setToolTipText("");
         username14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        view_concerts.setText("Confirm");
-        view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
-        view_concerts.addActionListener(new java.awt.event.ActionListener() {
+        confirmbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        confirmbutton.setText("Confirm");
+        confirmbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
+        confirmbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                view_concertsActionPerformed(evt);
+                confirmbuttonActionPerformed(evt);
             }
         });
 
@@ -206,7 +211,7 @@ public class OrAddEvent extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(view_concerts)
+                .addComponent(confirmbutton)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -241,7 +246,7 @@ public class OrAddEvent extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(username10))
                 .addGap(7, 7, 7)
-                .addComponent(view_concerts, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(confirmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -277,12 +282,20 @@ public class OrAddEvent extends javax.swing.JFrame {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void view_concertsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concertsActionPerformed
+    private void confirmbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_view_concertsActionPerformed
+    }//GEN-LAST:event_confirmbuttonActionPerformed
+
+    private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().Eventbackbutton();
+        this.dispose();
+    }//GEN-LAST:event_backbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backbutton;
+    private javax.swing.JButton confirmbutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -299,14 +312,12 @@ public class OrAddEvent extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
     private javax.swing.JTextField username10;
     private javax.swing.JTextField username11;
     private javax.swing.JTextField username12;
     private javax.swing.JTextField username13;
     private javax.swing.JTextField username14;
     private javax.swing.JTextField username9;
-    private javax.swing.JButton view_concerts;
     // End of variables declaration//GEN-END:variables
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

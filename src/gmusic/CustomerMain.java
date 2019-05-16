@@ -47,9 +47,15 @@ public class CustomerMain extends javax.swing.JFrame  {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
-        login = new javax.swing.JLabel();
+        logoutbutton = new javax.swing.JButton();
 
         jPanel1.setLayout(new java.awt.BorderLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 490));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setForeground(new java.awt.Color(240, 240, 240));
@@ -62,19 +68,45 @@ public class CustomerMain extends javax.swing.JFrame  {
         jLabel2.setToolTipText("");
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setSize(new java.awt.Dimension(500, 490));
 
         view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         view_concerts.setText("View Concerts/Festivals");
         view_concerts.setFont(new java.awt.Font("Segoe UI Light", 0, 12));
+        view_concerts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_concertsActionPerformed(evt);
+            }
+        });
 
         make_booking.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         make_booking.setText("Make Booking");
+        make_booking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                make_bookingActionPerformed(evt);
+            }
+        });
 
         view_bookings.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         view_bookings.setText("View Bookings");
+        view_bookings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                view_bookingsActionPerformed(evt);
+            }
+        });
 
         edit_details.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         edit_details.setText("Edit Account Details");
+        edit_details.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edit_detailsActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jLabel1.setText("Check out, our upcoming events!");
@@ -91,14 +123,13 @@ public class CustomerMain extends javax.swing.JFrame  {
 
         jPanel5.setBackground(new java.awt.Color(102, 102, 102));
 
-        login.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gmusic/icons/logout.png"))); // NOI18N
-        login.setText("Logout");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        login.setDoubleBuffered(true);
-        login.setName("login"); // NOI18N
+        logoutbutton.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        logoutbutton.setText("Log out");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -106,14 +137,14 @@ public class CustomerMain extends javax.swing.JFrame  {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoutbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(login)
+                .addComponent(logoutbutton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -200,6 +231,36 @@ public class CustomerMain extends javax.swing.JFrame  {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void view_concertsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_concertsActionPerformed
+        // TODO add your handling code here:
+        new Main().CMViewConcets();
+        this.dispose();
+    }//GEN-LAST:event_view_concertsActionPerformed
+
+    private void make_bookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_bookingActionPerformed
+        // TODO add your handling code here:
+        new Main().CMbooking();
+        this.dispose();
+    }//GEN-LAST:event_make_bookingActionPerformed
+
+    private void view_bookingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_bookingsActionPerformed
+        // TODO add your handling code here:
+        new Main().CMbookingView();
+        this.dispose();
+    }//GEN-LAST:event_view_bookingsActionPerformed
+
+    private void edit_detailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_detailsActionPerformed
+        // TODO add your handling code here:
+        new Main().CMeditAccount();
+        this.dispose();
+    }//GEN-LAST:event_edit_detailsActionPerformed
+
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
+        // TODO add your handling code here:
+        new Main().logoutOnChooseUserScreen();
+        this.dispose();
+    }//GEN-LAST:event_logoutbuttonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton edit_details;
@@ -215,7 +276,7 @@ public class CustomerMain extends javax.swing.JFrame  {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel login;
+    private javax.swing.JButton logoutbutton;
     private javax.swing.JButton make_booking;
     private javax.swing.JButton view_bookings;
     private javax.swing.JButton view_concerts;
