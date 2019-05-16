@@ -5,7 +5,6 @@
  */
 package gmusic;
 
-import static gmusic.Main.init;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -14,8 +13,9 @@ import javax.swing.JOptionPane;
  * @author Nirmal Sunny
  */
 public class Login {
-    void login(String username, String password) {
+    /**void login(String username, String password) {
         //logic for validation
+        //dataase
       if(true){
           JOptionPane.showMessageDialog(null, "Login Successful.");
           //find the usertype.
@@ -44,6 +44,6 @@ public class Login {
           JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
           //init();
       }
-    }
+    }*/
     
 }
