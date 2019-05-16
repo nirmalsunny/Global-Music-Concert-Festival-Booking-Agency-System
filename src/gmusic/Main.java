@@ -1,5 +1,9 @@
 package gmusic;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -17,20 +21,26 @@ public class Main {
         
     }
 
-    public static void init() {
-        MainView mainview = new MainView();
-        mainview.setVisible(true);
-        
+    public static void init() {        
         //check whether logged in or not
         //get data from db - select username, AccType rom login_table where loggedIn = 1;
-        String userid = "admin";
-        int Acctype = 2;
-        if(true) { //if result count is 1, then one user is logged in. if >1, then error.
-            load(Acctype, userid);
-        } else {
+        try{  
+            Class.forName("com.mysql.jdbc.Driver");  
+            Connection con=DriverManager.getConnection(  
+            "jdbc:mysql://studentnet.cst.beds.ac.uk/group6","cstmysql56","makeqehi");  
+            //here sonoo is database name, root is username and password  
+            Statement stmt=con.createStatement();  
+            ResultSet rs=stmt.executeQuery("select Acctype from login_table where isLoggedIn = 1;");  
+            if(rs.next()) {
+                load(rs.getString("AccType"));
+            }else {
             //login window
-            load(0, null);
+            load("Login");
         }
+            }
+        catch(Exception e){ 
+                System.out.println(e);
+        } 
     }
 
 
@@ -39,10 +49,6 @@ public class Main {
             new RegisterView().setVisible(true);
         }
     
-    void loginClicked() {
-        
-        new ChooseUserType().setVisible(true); 
-    }
     //Customer
     void CustomerLoginScreen() {
         new CustomerMain().setVisible(true);
@@ -135,12 +141,23 @@ public class Main {
              * 3 corporate
              * 4 organiser
              */
-    private static void load(int viewParameter, String userId) { //load main screen as per the user
-        if(viewParameter == 0) {
-            //logic for login table
-        } else {
-           
-        }
+    private static void load(String viewParameter) { //load main screen as per the user
+        
+       
+        switch(viewParameter) {
+            case "Login" : new MainView().setVisible(true);
+                    break;
+            case "Customer" : new Main().CustomerLoginScreen();
+                    break;
+            case "Corporate Organisation" : new Main().COLoginScreen();
+                    break;
+            case "Concert/Festival Organiser" : new Main().EventOrganiserLoginScreen();
+					break;
+            case "Administrator" : new Main().AdminLoginScreen();
+                    break;
+            default : new MainView().setVisible(true);
+                    break;
+            }
         }
 
     

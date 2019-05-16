@@ -223,8 +223,9 @@ public class MainView extends javax.swing.JFrame {
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         // TODO add your handling code here:
         if(checkInput()){
-            new Main().loginClicked();
-            this.dispose();
+            if(new Login().login(username.getText(), password.getText())) {
+                this.dispose();
+                }
             }
         else{
             JOptionPane.showMessageDialog(null, "Please Enter Both Fields.");

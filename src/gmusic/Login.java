@@ -5,8 +5,7 @@
  */
 package gmusic;
 
-import static gmusic.Main.init;
-import javax.swing.JFrame;
+import java.sql.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,38 +13,41 @@ import javax.swing.JOptionPane;
  * @author Nirmal Sunny
  */
 public class Login {
-    void login(String username, String password) {
+    boolean login(String username, String password) {
         //logic for validation
-      if(true){
-          JOptionPane.showMessageDialog(null, "Login Successful.");
-          //find the usertype.
-          int userType = 1;
-          JFrame window = new JFrame();
-          /*switch(userType){
-              case 1 :  window.setContentPane(new CustomerMain());
-                        break;
-              case 2 :  window.setContentPane(new CoMain());
-                        break;
-               case 3 : window.setContentPane(new ConcertOrganiserMain());
-                        break;
-               case 4 : window.setContentPane(new AdminMain());
-                        break;
-              default : JOptionPane.showMessageDialog(null, "Error!");
-          }
-            */
-            window.setContentPane(new CustomerMain());
-            window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            window.setBackground(new java.awt.Color(255, 255, 255));
-            //window.setBounds(new java.awt.Rectangle(0, 0, 500, 400));
-            window.setResizable(false);
-            window.setSize(new java.awt.Dimension(500, 450));
-            window.setLocationRelativeTo(null);
-            window.pack();
-            window.setVisible(true);
+        try{  
+            Class.forName("com.mysql.jdbc.Driver");  
+            Connection con=DriverManager.getConnection(  
+            "jdbc:mysql://studentnet.cst.beds.ac.uk/group6","cstmysql56","makeqehi");  
+            //here sonoo is database name, root is username and password  
+            Statement stmt=con.createStatement();  
+            ResultSet rs=stmt.executeQuery("select username, password from login_table where username = "
+                    + "'" + username + "' and password = '" + password + "';");  
+            if(rs.next()) {  
+             JOptionPane.showMessageDialog(null, "Login Successful.");
+             stmt. executeUpdate("update login_table set isLoggedIn = 1 where username = '" 
+             + username + "';");
+          Main.init();
+          return true;
       } else {
           JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
-          //init();
+          return false;
       }
+            }
+        catch(Exception e){ 
+                System.out.println(e);
+        }  
+        return false;
+            }  
+       /* String user = "admin";
+        String pass = "pass";
+      if(user.equals(username) && pass.equals(password)){
+          
+      
+    }*/
+
+    void logout() {
+        //set isLoggedin = 0
     }
     
 }

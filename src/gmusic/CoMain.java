@@ -280,7 +280,7 @@ public class CoMain extends javax.swing.JFrame {
 
     private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
         // TODO add your handling code here:
-        new Main().logoutOnChooseUserScreen();
+        new Login().logout();
         this.dispose();
     }//GEN-LAST:event_logoutbuttonActionPerformed
 
